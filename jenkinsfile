@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('first stage') {
             steps {
-            echo "the git commited id :$(GIT_COMMIT)"
-            echo "creating branch :$(GIT_BRANCH)"
+            echo "the git commited id :${GIT_COMMIT}"
+            echo "creating branch :${GIT_BRANCH}"
             }
         }
     }
