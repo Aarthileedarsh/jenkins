@@ -1,8 +1,12 @@
 pipeline {
     agent any
+    environment {
+        x = 'varibal name'
+    }
     stages {
         stage('first stage') {
             steps {
+            echo "the value x :${x}"
             echo "the git commited id :${GIT_COMMIT}"
             echo "creating branch :${GIT_BRANCH}"
             }
