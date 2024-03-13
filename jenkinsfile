@@ -1,9 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage ('first stage') {
-            echo " the git commited id :$(GIT_COMMIT)"
+        stage('first stage') {
+            steps {
+            echo "the git commited id :$(GIT_COMMIT)"
             echo "creating branch :$(GIT_BRANCH)"
+            }
         }
     }
 }
