@@ -1,2 +1,10 @@
-Hi i am creating my jenkinsfile
-to pull jenkins
+pipeline {
+    agent any
+    stages {
+        stage ('first stage') {
+            echo " the git commited id :$(Git_Commit)"
+        }
+    }
+}
+
+    
