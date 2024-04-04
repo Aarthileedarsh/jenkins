@@ -4,6 +4,13 @@ pipeline {
         x = 'varibal name'
     }
     stages {
+        stage('array') {
+            steps {
+                def intArray = ["1", "2", "3", "4"]
+                    def arraySize = intArray.size()
+                    echo "Size of the array: ${arraySize}"
+           }
+        }
         stage('first stage') {
             steps {
             echo "the value x :${x}"
