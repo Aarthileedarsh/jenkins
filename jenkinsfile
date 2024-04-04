@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
     environment {
@@ -6,9 +7,11 @@ pipeline {
     stages {
         stage('array') {
             steps {
-                def intArray = ["1", "2", "3", "4"]
-                    def arraySize = intArray.size()
-                    echo "Size of the array: ${arraySize}"
+                script {
+                    def intArray = ["1", "2", "3", "4"]
+                        def arraySize = intArray.size()
+                        echo "Size of the array: ${arraySize}"
+                }
            }
         }
         stage('first stage') {
