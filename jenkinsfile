@@ -8,8 +8,8 @@ pipeline {
         stage('array') {
             steps {
                 script {
-                    def intArray = ["1", "2", "3", "4"]
-                        def arraySize = intArray.size()
+                    def nhg = ["1", "2", "3", "4"]
+                        def arraySize = nhg.size()
                         echo "Size of the array: ${arraySize}"
                 }
            }
